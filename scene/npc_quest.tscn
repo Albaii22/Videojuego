@@ -1,0 +1,154 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1we21m5sxbjl"]
+
+[ext_resource type="Texture2D" uid="uid://dfba1vacqgj2t" path="res://art/invetory_art/inventory-background.png" id="1_syn0d"]
+[ext_resource type="Script" path="res://script/npc_quest.gd" id="1_utb2h"]
+
+[node name="npc_quest" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_utb2h")
+
+[node name="quest1_ui" type="NinePatchRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -48.0
+offset_top = -78.0
+offset_right = 45.0
+offset_bottom = -18.0
+texture = ExtResource("1_syn0d")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="name" type="RichTextLabel" parent="quest1_ui"]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 156.0
+offset_bottom = 24.0
+scale = Vector2(0.5, 0.5)
+text = "Worker Quest:"
+
+[node name="Text" type="RichTextLabel" parent="quest1_ui"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 11.0
+offset_right = 174.0
+offset_bottom = 103.0
+scale = Vector2(0.5, 0.5)
+text = "Podrias recoger 7 manzanas , 6 palos y 6 slime?"
+
+[node name="AceptarBotton" type="Button" parent="quest1_ui"]
+modulate = Color(0.564706, 1, 0.501961, 1)
+layout_mode = 0
+offset_left = 37.0
+offset_top = 44.0
+offset_right = 106.0
+offset_bottom = 75.0
+scale = Vector2(0.3, 0.3)
+text = "Aceptar"
+
+[node name="CancelarBotton2" type="Button" parent="quest1_ui"]
+modulate = Color(0.729412, 0.0666667, 0.0196078, 1)
+layout_mode = 0
+offset_left = 62.0
+offset_top = 44.0
+offset_right = 131.0
+offset_bottom = 75.0
+scale = Vector2(0.3, 0.3)
+text = "No"
+
+[node name="no_quest" type="NinePatchRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -48.0
+offset_top = -78.0
+offset_right = 45.0
+offset_bottom = -18.0
+texture = ExtResource("1_syn0d")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="name" type="RichTextLabel" parent="no_quest"]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 134.0
+offset_bottom = 22.0
+scale = Vector2(0.5, 0.5)
+text = "Worker Quest:"
+
+[node name="Text" type="RichTextLabel" parent="no_quest"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 11.0
+offset_right = 174.0
+offset_bottom = 103.0
+scale = Vector2(0.5, 0.5)
+text = "No hay mas misiones disponibles..."
+
+[node name="quest_finished" type="NinePatchRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -48.0
+offset_top = -78.0
+offset_right = 45.0
+offset_bottom = -18.0
+texture = ExtResource("1_syn0d")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="name" type="RichTextLabel" parent="quest_finished"]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 134.0
+offset_bottom = 22.0
+scale = Vector2(0.5, 0.5)
+text = "Worker Quest:"
+
+[node name="Text" type="RichTextLabel" parent="quest_finished"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 11.0
+offset_right = 174.0
+offset_bottom = 103.0
+scale = Vector2(0.5, 0.5)
+text = "Buen trabajo!! Graciass!!!"
+
+[node name="advice" type="NinePatchRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -48.0
+offset_top = -78.0
+offset_right = 45.0
+offset_bottom = -18.0
+texture = ExtResource("1_syn0d")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="name" type="RichTextLabel" parent="advice"]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 152.0
+offset_bottom = 26.0
+scale = Vector2(0.5, 0.5)
+text = "Worker Quest:"
+
+[node name="Text" type="RichTextLabel" parent="advice"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 11.0
+offset_right = 174.0
+offset_bottom = 103.0
+scale = Vector2(0.5, 0.5)
+text = "Ten cuidado , cuando matas a un slime podria hacerte daño.."
+
+[connection signal="pressed" from="quest1_ui/AceptarBotton" to="." method="_on_aceptar_botton_pressed"]
+[connection signal="pressed" from="quest1_ui/CancelarBotton2" to="." method="_on_cancelar_botton_2_pressed"]

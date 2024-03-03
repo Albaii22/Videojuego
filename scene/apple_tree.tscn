@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://cexv4v6pj2igk"]
+
+[ext_resource type="Script" path="res://script/apple_tree.gd" id="1_8uegt"]
+[ext_resource type="Resource" uid="uid://cv1vymyrqltxi" path="res://inventory/items/apple.tres" id="2_0l3ir"]
+[ext_resource type="Texture2D" uid="uid://csswhvl4ua01r" path="res://art/environment/survivalgame-appletree.png" id="2_euoit"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_imvxm"]
+atlas = ExtResource("2_euoit")
+region = Rect2(40, 0, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_023my"]
+atlas = ExtResource("2_euoit")
+region = Rect2(80, 0, 40, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e5rok"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_imvxm")
+}],
+"loop": true,
+"name": &"apples",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_023my")
+}],
+"loop": true,
+"name": &"no apples",
+"speed": 0.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_boma2"]
+radius = 23.0868
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3173v"]
+radius = 7.0
+
+[node name="apple_tree" type="Node2D"]
+script = ExtResource("1_8uegt")
+item = ExtResource("2_0l3ir")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_e5rok")
+animation = &"apples"
+
+[node name="pickable_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pickable_area"]
+shape = SubResource("CircleShape2D_boma2")
+
+[node name="apple_timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="collision" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision"]
+position = Vector2(0, 9)
+shape = SubResource("CircleShape2D_3173v")
+
+[connection signal="body_entered" from="pickable_area" to="." method="_on_pickable_area_body_entered"]
+[connection signal="body_exited" from="pickable_area" to="." method="_on_pickable_area_body_exited"]
+[connection signal="timeout" from="apple_timer" to="." method="_on_apple_timer_timeout"]

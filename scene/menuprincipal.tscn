@@ -1,0 +1,184 @@
+[gd_scene load_steps=12 format=3 uid="uid://w2va6trgbxfl"]
+
+[ext_resource type="Script" path="res://script/menuprincipal.gd" id="1_bfrsu"]
+[ext_resource type="Texture2D" uid="uid://bb2qd4nx4427x" path="res://art/menu/wallhaven-0q5xk7.png" id="1_yf157"]
+[ext_resource type="FontFile" uid="uid://c411l7b4vc88n" path="res://fonts/Beleren2016-Bold.ttf" id="3_7iyh6"]
+[ext_resource type="StyleBox" uid="uid://b42qugnwsmgu0" path="res://styles/new_style_box_flat.tres" id="3_vxv10"]
+[ext_resource type="StyleBox" uid="uid://c04jg2n75ankv" path="res://styles/hover.tres" id="4_xynd0"]
+[ext_resource type="Texture2D" uid="uid://c1ejl7nuhr50b" path="res://art/menu/Sin_titulo-1.png" id="5_mmyo0"]
+[ext_resource type="Texture2D" uid="uid://554ibpat0q20" path="res://art/menu/wasd.png" id="7_4h6de"]
+[ext_resource type="Texture2D" uid="uid://bt2gmom4mhl8f" path="res://art/menu/f.png" id="8_x1u1c"]
+[ext_resource type="Texture2D" uid="uid://dvjrx8l4q75ew" path="res://art/menu/Q.png" id="9_q2460"]
+[ext_resource type="Texture2D" uid="uid://bmvir2u2trcc0" path="res://art/menu/r.png" id="10_1vfpi"]
+[ext_resource type="Texture2D" uid="uid://ck1b8pknc7xvs" path="res://art/menu/e.png" id="11_c4kqd"]
+
+[node name="menuprincipal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bfrsu")
+
+[node name="Wallhaven-0q5Xk7" type="Sprite2D" parent="."]
+position = Vector2(960, 539)
+texture = ExtResource("1_yf157")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.5
+offset_top = -53.0
+offset_right = 99.5
+offset_bottom = 53.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 19
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_7iyh6")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("3_vxv10")
+theme_override_styles/hover = ExtResource("4_xynd0")
+theme_override_styles/pressed = ExtResource("4_xynd0")
+text = "Empezar"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("3_7iyh6")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("3_vxv10")
+theme_override_styles/hover = ExtResource("4_xynd0")
+theme_override_styles/pressed = ExtResource("4_xynd0")
+text = "Salir"
+
+[node name="titulo" type="Sprite2D" parent="."]
+position = Vector2(972, 344)
+scale = Vector2(0.574603, 0.624912)
+texture = ExtResource("5_mmyo0")
+
+[node name="Wasd" type="Sprite2D" parent="."]
+position = Vector2(165, 924)
+scale = Vector2(0.257813, 0.257813)
+texture = ExtResource("7_4h6de")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -867.0
+offset_top = -99.0
+offset_right = -655.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_7iyh6")
+theme_override_font_sizes/font_size = 59
+text = "Move
+"
+
+[node name="F" type="Sprite2D" parent="."]
+position = Vector2(419, 928)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_x1u1c")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -608.0
+offset_top = -89.0
+offset_right = -396.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_7iyh6")
+theme_override_font_sizes/font_size = 52
+text = "Interact
+"
+
+[node name="Q" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1431, 922)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("9_q2460")
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 425.0
+offset_top = -89.0
+offset_right = 637.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_7iyh6")
+theme_override_font_sizes/font_size = 52
+text = "Bow
+"
+
+[node name="R" type="Sprite2D" parent="."]
+position = Vector2(1733, 926)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("10_1vfpi")
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 613.0
+offset_top = -91.0
+offset_right = 947.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_7iyh6")
+theme_override_font_sizes/font_size = 59
+text = "Take mission"
+
+[node name="E" type="Sprite2D" parent="."]
+position = Vector2(938, 927)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("11_c4kqd")
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -77.0
+offset_top = -90.0
+offset_right = 135.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_7iyh6")
+theme_override_font_sizes/font_size = 52
+text = "Loot
+"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]

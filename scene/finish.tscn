@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://ba3ul3idgwbvg"]
+
+[ext_resource type="Script" path="res://scene/finish.gd" id="1_8p71d"]
+[ext_resource type="Texture2D" uid="uid://bb2qd4nx4427x" path="res://art/menu/wallhaven-0q5xk7.png" id="1_vqu35"]
+[ext_resource type="FontFile" uid="uid://c411l7b4vc88n" path="res://fonts/Beleren2016-Bold.ttf" id="2_hf1qd"]
+[ext_resource type="StyleBox" uid="uid://b42qugnwsmgu0" path="res://styles/new_style_box_flat.tres" id="3_da0ly"]
+[ext_resource type="StyleBox" uid="uid://c04jg2n75ankv" path="res://styles/hover.tres" id="4_24qv8"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8p71d")
+
+[node name="Wallhaven-0q5Xk7" type="Sprite2D" parent="."]
+position = Vector2(960, 541)
+texture = ExtResource("1_vqu35")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 696.0
+offset_top = 292.0
+offset_right = 1159.0
+offset_bottom = 349.0
+theme_override_fonts/font = ExtResource("2_hf1qd")
+theme_override_font_sizes/font_size = 60
+text = "Ganaste maquina"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 852.0
+offset_top = 456.0
+offset_right = 958.0
+offset_bottom = 507.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_hf1qd")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("3_da0ly")
+theme_override_styles/hover = ExtResource("4_24qv8")
+theme_override_styles/pressed = ExtResource("4_24qv8")
+text = "Salir"
+
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

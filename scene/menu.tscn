@@ -1,0 +1,139 @@
+[gd_scene load_steps=10 format=3 uid="uid://dy3qjwt4v0xux"]
+
+[ext_resource type="Texture2D" uid="uid://bb4b68ak5uvf8" path="res://art/menu/fondo-paisaje-rural-pixel-art_52683-125379.png" id="1_stefw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uddnt"]
+bg_color = Color(0.356863, 0.643137, 0.752941, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bqu5s"]
+bg_color = Color(0.819608, 0.513726, 0.352941, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ylkbl"]
+bg_color = Color(0.807843, 0.501961, 0.223529, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yq1ve"]
+bg_color = Color(0.356863, 0.643137, 0.752941, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5bcfw"]
+bg_color = Color(0.819608, 0.513726, 0.352941, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ymjsh"]
+bg_color = Color(0.807843, 0.513726, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xj7tn"]
+bg_color = Color(0.552941, 0.643137, 0.333333, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5d2bl"]
+bg_color = Color(0.819608, 0.294118, 0.254902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="PanelContainer" type="PanelContainer"]
+offset_right = 434.0
+offset_bottom = 316.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer"]
+texture_filter = 1
+position = Vector2(51.6291, 80.1094)
+scale = Vector2(0.774348, 0.873426)
+texture = ExtResource("1_stefw")
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+z_index = 2
+texture_filter = 1
+layout_mode = 2
+text = "Albaii Game"
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_uddnt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bqu5s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ylkbl")
+text = "Empezar"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_yq1ve")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5bcfw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ymjsh")
+text = "Controles"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_xj7tn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5d2bl")
+text = "Salir"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+texture_filter = 1
+position = Vector2(322, 180)
+zoom = Vector2(3, 3)
